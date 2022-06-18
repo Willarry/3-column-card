@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+  --color-card-orange: hsl(31, 77%, 52%);
+  --color-card-cyan: hsl(184, 100%, 22%);
+  --color-card-dark-cyan: hsl(179, 100%, 13%);
+  --color-white-transparent75: hsla(0, 0%, 100%, 0.75);
+  --color-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 60px;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  padding: 3rem 0;
+}
+
+main div:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+main div:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.btn {
+  text-decoration: none;
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--color-light-gray);
+  border-radius: 100px;
+  padding: 10px 15px;
+  display: inline-block;
+  border: 2px solid transparent;
+  margin-top: 1.5rem;
+}
+
+.btn--orange {
+  color: var(--color-card-orange);
+}
+
+.btn--orange:hover,
+.btn--orange:focus,
+.btn--orange:active {
+  background-color: var(--color-card-orange);
+  color: var(--color-light-gray);
+  border: 2px solid var(--color-light-gray);
+}
+
+.btn--cyan {
+  color: var(--color-card-cyan);
+}
+
+.btn--cyan:hover,
+.btn--cyan:focus,
+.btn--cyan:active {
+  background-color: var(--color-card-cyan);
+  color: var(--color-light-gray);
+  border: 2px solid var(--color-light-gray);
+}
+
+.btn--dark-cyan {
+  color: var(--color-card-dark-cyan);
+}
+
+.btn--dark-cyan:hover,
+.btn--dark-cyan:focus,
+.btn--dark-cyan:active {
+  background-color: var(--color-card-dark-cyan);
+  color: var(--color-light-gray);
+  border: 2px solid var(--color-light-gray);
+}
+.card {
+  padding: 3rem;
+}
+
+.card__title {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.25rem;
+  color: var(--color-light-gray);
+  margin-top: 1rem;
+}
+
+.card__text {
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--color-white-transparent75);
+  margin-top: 1.5em;
+}
+
+.card--orange {
+  background-color: var(--color-card-orange);
+}
+.card--cyan {
+  background-color: var(--color-card-cyan);
+}
+.card--dark-cyan {
+  background-color: var(--color-card-dark-cyan);
+}
+
+@media (min-width: 775px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 960px;
+  }
+
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .btn {
+    align-self: flex-start;
+    margin-top: 4rem;
+  }
+
+  main div:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+
+  main div:last-child {
+    border-radius: 0 10px 10px 0;
+  }
+}
